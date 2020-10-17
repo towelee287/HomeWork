@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	color: $fontColorMain;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1140px;
+}
+.hidden {
+	display: none !important;
+}
+//
+//@media (max-width: 576px) {
+//	.container {
+//		background-color: antiquewhite;
+//		width: fit-content;
+//	}
+//
+//	.header {
+//		height: fit-content;
+//	}
+//
+//	.header,
+//	.header__left {
+//		flex-direction: column;
+//	}
+//
+//	.header__right {
+//		.header__cart {
+//			display: none;
+//		}
+//	}
+//}

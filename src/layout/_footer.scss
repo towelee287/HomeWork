@@ -1,0 +1,139 @@
+.footer {
+	height: 438px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.footer__info {
+
+		.footer__logo {
+			text-transform: uppercase;
+			font-size: 27px;
+			font-weight: 300;
+			line-height: 32px;
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+			color: $fontColorMain;
+
+			img {
+				margin-right: 13px;
+			}
+
+			span {
+				color: $fontColorAdd;
+				font-weight: 400;
+			}
+		}
+
+		.footer__text {
+			margin-top: 41px;
+			width: 427px;
+
+			p,
+			span {
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 24px;
+			}
+
+			span {
+				display: block;
+				margin-top: 41px;
+			}
+
+		}
+
+	}
+
+	.footer__links {
+		display: flex;
+		justify-content: space-around;
+		width: 900px;
+
+		.footer__link {
+			display: flex;
+			flex-direction: column;
+
+			h2 {
+				font-size: 18px;
+				font-weight: 700;
+				line-height: 26px;
+				color: $fontColorAdd;
+				letter-spacing: 0.45px;
+				text-transform: uppercase;
+			}
+
+			a {
+				text-decoration: none;
+				color: #898989;
+				font-size: 16px;
+				font-weight: 400;
+				letter-spacing: 0.4px;
+				line-height: 42px;
+				width: fit-content;
+				
+				&:hover {
+					border-bottom: 2px solid $fontColorAdd;
+					margin-bottom: -2px;
+				}
+			}
+		}
+
+
+	}
+
+}
+
+.media {
+	width: 100%;
+	background-color: $backColorWidth;
+
+	.media__inside {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: $backColorWidth;
+		height: 79px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 42px;
+		letter-spacing: 0.4px;
+
+		.media__links {
+			display: flex;
+
+			.media__link {
+				width: 32px;
+				height: 32px;
+				background-color: #ffffff;
+				transition-duration: 0.3s;
+
+				&:hover {
+					background-color: $fontColorAdd;
+					transform: scale(1.2, 1.2);
+					transform: rotateZ(360deg);
+
+					a {
+						color: #ffffff;
+					}
+				}
+
+				&:not(:last-child) {
+					margin-right: 8px;
+				}
+			}
+
+			a {
+				width: inherit;
+				height: inherit;
+				color: #b2b2b2;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+			}
+		}
+	}
+}
