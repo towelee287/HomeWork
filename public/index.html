@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Index</title>
-	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="../src/layout/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/513983c0aa.js" crossorigin="anonymous"></script>
 </head>
@@ -13,7 +13,7 @@
 	<header class="header container">
 
 		<div class="header__left">
-			<a href="index.html" class="header__logo"><img src="style/img/Group_2.png" alt="">Bran<span>d</span></a>
+			<a href="index.html" class="header__logo"><img src="../src/assets/img/Group_2.png" alt="">Bran<span>d</span></a>
 
 			<form class="header__search" method="get">
 				<div class="browse">Browse <i class="fas fa-caret-down"></i></div>
@@ -24,9 +24,26 @@
 		</div>
 
 		<div class="header__right">
-			<a href="#" class="header__cart"><img src="style/img/Forma_1.svg" alt=""></a>
-			<a href="#" class="header__account">My Account <i class="fas fa-caret-down"></i></a>
-		</div>
+            <a href="#" class="header__cart" id="toggle-basket">
+                <div id="cart-badge" class="header__cart-badge">0</div>
+                <img src="../src/assets/img/Forma_1.svg" alt="card" class="header__cart-img">
+            </a>
+
+            <div class="drop-cart hidden">
+                <div id="basket">
+
+                </div>
+                <div class="drop-cart__total">
+                    <span class="drop-cart__total-name">TOTAL</span>
+                    <span id="basket-total" class="drop-cart__total-sum">	</span>
+                </div>
+                <a id="checkout-button" onclick="return false" href="checkout.html" class="drop-cart__button">Checkout</a>
+                <a id="go-cart" href="shopping-cart.html" class="drop-cart__button">Go to cart</a>
+            </div>
+
+            <a href="#" class="button">My Account<i class="fas fa-caret-down"></i></a>
+            <a href="#" class="icon-user"><i class="fas fa-user-alt"></i></a>
+        </div>
 
 
 	</header>
@@ -71,80 +88,8 @@
 			<div class="featured__text">Featured Items<br><span>Shop for items based on what we featured in this week</span></div>
 
 			<div class="featured__items container" id="catalog">
-
-				<script>
-					const NAMES = ['mango people t-shirt', 'banana people t-shirt', 'strawberry people t-shirt', 'orange people t-shirt', 
-        							'pumpkin people t-shirt', 'pineapple people t-shirt', 'cucumber people t-shirt', 'tomato people t-shirt'];
-					const PRICES = ['52', '53', '55', '67', '69', '94', '23', '45'];
-					
-					const catalog = {
-						items: [],
-						container: null,
-						imgUrl: 'https://raw.githubusercontent.com/towelee287/Static/master/git%20img',
-						init() {
-							this.container = document.querySelector('#catalog');
-							this.items = compile();
-							this.render();
-						},
-						render() {
-						let htmlStr = '';
-						this.items.forEach((item, index) => {
-							htmlStr += `
-							<div class="featured__item">
-
-								<a href="#">
-									<img src="${this.imgUrl}/Layer_${index+2}.jpg" alt="">
-									<div class="item__hover">
-										<div class="cart"><img src="style/img/Forma_1_copy.svg" alt="">Add to Cart</div>
-									</div>
-								</a>
-								<div class="item__bot">${item.productName}<br><span>$${item.productPrice}</span>
-								</div>
-
-							</div>
-							`
-						});
-						this.container.innerHTML = htmlStr;
-						}
-					}
-					catalog.init()
-
-					function compile() {
-						return NAMES.map((name,index) => create(NAMES[index], PRICES[index]));
-					}
-
-					function create(name, price) {
-						return {
-							productName: name,
-							productPrice: price
-						}
-					}
-
-				</script>
-
-			
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 				
-
-				</div>
+			</div>
 			</div>
 		</div>
 
@@ -158,19 +103,19 @@
 				</div>
 			</div>
 			<div class="bonus">
-				<div class="bonus__main"><img src="style/img/Forma_11.svg" alt="">
+				<div class="bonus__main"><img src="../src/assets/img/Forma_11.svg" alt="">
 					<div class="bonus__info">
 						<h2>Free Delivery</h2>
 						<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
 					</div>
 				</div>
-				<div class="bonus__main"><img src="style/img/Forma_12.svg" alt="">
+				<div class="bonus__main"><img src="../src/assets/img/Forma_12.svg" alt="">
 					<div class="bonus__info">
 						<h2>Sales &amp; discounts</h2>
 						<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
 					</div>
 				</div>
-				<div class="bonus__main"><img src="style/img/Forma_13.svg" alt="">
+				<div class="bonus__main"><img src="../src/assets/img/Forma_13.svg" alt="">
 					<div class="bonus__info">
 						<h2>Quality assurance</h2>
 						<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
@@ -183,7 +128,7 @@
 		<div class="feedback__subscribe__back">
 			<div class="feedback__subscribe container">
 				<div class="feedback">
-					<img src="style/img/Layer_40.png" alt="">
+					<img src="../src/assets/img/Layer_40.png" alt="">
 					<div class="feedback__info">
 						<p class="feedback__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
 							a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
@@ -223,7 +168,7 @@
 
 		<div class="footer__info">
 			<div class="footer__logo">
-				<img src="style/img/Group_2.png" alt=""> Bran<span>d</span>
+				<img src="../src/assets/img/Group_2.png" alt=""> Bran<span>d</span>
 			</div>
 			<div class="footer__text">
 				<p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.</p>
@@ -270,7 +215,8 @@
 			</div>
 		</div>
 	</div>
-
+	<script src="../src/components/basket.js"></script>
+	<script src="../src/components/catalog.js"></script>
 </body>
 
 </html>

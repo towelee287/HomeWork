@@ -5,7 +5,7 @@
 
 .brand {
 	height: 665px;
-	background-image: url(img/Layer_24.jpg);
+	background-image: url(../assets/img/Layer_24.jpg);
 	display: flex;
 	align-items: center;
 
@@ -43,7 +43,7 @@
 	.men {
 		width: 560px;
 		height: 542px;
-		background-image: url(img/Layer_30.jpg);
+		background-image: url(../assets/img/Layer_30.jpg);
 		display: flex;
 		align-items: flex-start;
 	}
@@ -51,7 +51,7 @@
 	.accesories {
 		width: 560px;
 		height: 251px;
-		background-image: url(img/2-layers.jpg);
+		background-image: url(../assets/img/2-layers.jpg);
 		display: flex;
 		align-items: flex-start;
 	}
@@ -59,7 +59,7 @@
 	.women {
 		width: 560px;
 		height: 251px;
-		background-image: url(img/Layer_32.jpg);
+		background-image: url(../assets/img/Layer_32.jpg);
 		display: flex;
 		align-items: flex-start;
 	}
@@ -67,7 +67,7 @@
 	.kids {
 		width: 560px;
 		height: 542px;
-		background-image: url(img/Layer_31.jpg);
+		background-image: url(../assets/img/Layer_31.jpg);
 		display: flex;
 		align-items: flex-start;
 	}
@@ -137,16 +137,30 @@
 				transition-duration: 0.5s;
 
 				.cart {
-					width: 123px;
-					height: 39px;
+					width: 160px;
+					height: 45px;
 					padding: 10px 13px 7px 12px;
 					color: #ffffff;
+					background: rgba(58, 56, 56, 0);
 					font-size: 13px;
 					font-weight: 700;
 					border: 1px solid #ffffff;
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					transition: box-shadow 0.3s, scale 0.1s;
+					
+					
+					&:focus {
+						outline-style: none;
+					}
+					&:hover {
+						box-shadow: 0 0 1rem 0.2rem $fontColorAdd;
+						cursor: pointer;
+					}
+					&:active {
+						transform: scale(0.9, 0.9);
+					}
 
 					img {
 						width: 23px;
@@ -242,7 +256,7 @@
 	.offer {
 		width: 767px;
 		height: 529px;
-		background-image: url(img/image.jpg);
+		background-image: url(../assets/img/image.jpg);
 		background-size: cover;
 		padding-top: 146px;
 		padding-left: 39px;
@@ -315,7 +329,7 @@
 .feedback__subscribe__back {
 	width: 100%;
 	background-color: $backColorWidth;
-	background-image: url(img/21-layers.jpg);
+	background-image: url(../assets/img/21-layers.jpg);
 	background-size: cover;
 }
 
