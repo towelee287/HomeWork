@@ -27,7 +27,6 @@ const basket = {
     _handleEvents() {
         document.querySelector('#toggle-basket').addEventListener('click', () => {
             this.wrapper.classList.toggle('hidden');
-            console.log(this)
         });
         this.container.addEventListener('click', e => {
             if (e.target.name == 'remove') {
@@ -59,15 +58,19 @@ const basket = {
         this._total();
     },
     _total() {
-        let totalStr = '';
+        let sum;
+        if (this.items.length > 0) {
+            let totalStr = '';
         let arr = [];
 		this.items.forEach((item) => {
 			arr.push((item.productPrice)*(item.amount));
         })
-         let sum = arr.reduce((sum, current) => {
+         sum = arr.reduce((sum, current) => {
             return sum + current;
         })
         console.log(sum)
+        } else sum = 0;
+        
         totalStr = `$${sum}`
 
 
