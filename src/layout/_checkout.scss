@@ -1,0 +1,162 @@
+.content {
+
+	margin-top: 89px;
+}
+
+.checkout_block {
+	border-bottom: 1px solid $backColorWidth;
+	padding: 39px 35px;
+	transition-duration: 1s;
+}
+
+#checkbox1,
+#checkbox2,
+#checkbox3,
+#checkbox4,
+#checkbox5,
+#checkbox6 {
+	display: none;
+}
+
+label {
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.content_block {
+		height: 0;
+	transition-duration: 1s;
+		opacity: 0%;
+	justify-content: space-between;
+	display: none;
+	padding: 39px 35px 0;
+}
+
+input:checked ~ .content_block {
+	height: 100%;
+		opacity: 100%;
+	display: flex;
+transition-duration: 1s;
+}
+
+.check_register,
+.log-in {
+	
+	label {
+		font-size: 13px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $fontColorMain;
+		cursor: pointer;
+	}
+
+	input[type=radio] {
+		margin-right: 14px;
+		cursor: pointer;
+		color: black;
+	}
+
+	h2 {
+		font-size: 13px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $fontColorMain;
+	}
+
+	p {
+		font-size: 13px;
+		font-weight: 400;
+		color: #b3b2b2;
+	}
+
+	span {
+		color: #ff0d0d;
+		font-size: 13px;
+		font-weight: 600;
+		line-height: 20px;
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 180px;
+		height: 50px;
+		font-size: 11px;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding: 14px;
+		text-decoration: none;
+		color: $fontColorMain;
+		border: 1px solid $greyColorAdd;
+		box-sizing: border-box;
+		transition-duration: 0.5s;
+
+		&:hover {
+			transition-duration: 0.5s;
+			box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+		}
+	}
+}
+
+.check_register {
+	div {
+		line-height: 28px;
+	}
+
+	div:not(:first-child) {
+		margin-top: 31px;
+	}
+
+	.link {
+		margin-top: 32px;
+
+
+
+	}
+}
+
+.log-in {
+	div {
+		line-height: 28px;
+	}
+
+	div:not(:first-child) {
+		margin-top: 27px;
+	}
+
+	div:last-child {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 37px;
+
+		p {
+			color: $fontColorMain;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 20px;
+
+			a {
+				all: unset;
+				cursor: pointer;
+			}
+		}
+	}
+
+	input {
+		width: 355px;
+		height: 45px;
+		border: 1px solid $greyColorAdd;
+		padding-left: 18px;
+		box-sizing: border-box;
+
+		&:focus {
+			outline-style: none;
+		}
+	}
+
+}
